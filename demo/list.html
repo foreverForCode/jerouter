@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <script src="../jeui.js"></script>
+    <script src="../jeRoute.js"></script>
+    <link href="../css/jeui.css" rel="stylesheet" type="text/css">
+</head>
+<body class="viewbody">
+    <view class="viewwrap">
+        <header class="viewhead bg-red wh">header</header>
+        <content class="viewmain list">
+            <style>
+                .list {
+                    background-color: #ffb400;
+                    color: #fff;
+                }
+    
+            </style>
+    
+            <div class="viewport-content">
+                list
+                <button class="je-btn bg-blue" je-back> back </button>
+                <button class="je-btn bg-orange" je-tap="@demo/booking.html"> to list </button>
+            </div>
+        </content>
+        <footer class="viewfoot"></footer>
+        <script jsurl="./demo/js/list.js"></script>
+    </view>
+</body>
+</html>

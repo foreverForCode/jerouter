@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Title</title>
+    <script src="../jeRoute.js"></script>
+    <link rel="stylesheet" href="./css/spa.css">
+
+
+</head>
+<body>
+
+<div class="main-viewport">
+    <div class="viewport index-viewport" data-no-init="true">
+        <style>
+            .index-viewport {
+                background: cornflowerblue;
+            }
+
+        </style>
+
+        <div class="viewport-content">
+            index
+
+            <button class="js_tolist" je-tap="@list.html"> to list </button>
+        </div>
+
+
+        <script type="text/fscript" src="./js/index.js" ></script>
+        <script>
+            (function docBodySize() {
+                var getDocSize = function () {
+                    var navMatch = /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|JUC|WebOS|Windows Phone)/i,
+                        isMobile = navigator.userAgent.match(navMatch), doc = document,
+                        docWidth = doc.documentElement.clientWidth || doc.body.clientWidth,
+                        docHeight = doc.documentElement.clientHeight || doc.body.clientHeight;
+                    if (!isMobile && docWidth > 720) {
+                        doc.body.style.width = "720px";
+                        doc.body.style.height = docHeight + "px";
+                    } else {
+                        doc.body.style.width = docWidth + "px";
+                        doc.body.style.height = docHeight + "px";
+                    }
+                }
+                getDocSize();
+                window.addEventListener("resize",function(){
+                    getDocSize();
+                })
+            })()
+            
+
+            var r = jeRoute({
+                viewUrl:"./index.html",
+                data:{
+                    tmn:810
+                }
+            })
+            console.log(r)
+        </script>
+    </div>
+</div>
+
+
+
+</body>
+</html>
